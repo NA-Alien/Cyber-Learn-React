@@ -12,7 +12,7 @@ export default function MiddleSchool() {
       <div className="max-w-6xl mx-auto">
         <header className="mb-16">
           <h1 className="text-6xl font-black tracking-tighter text-slate-900 mb-4">GRADES 6-8</h1>
-          <p className="text-xl text-slate-500 font-medium">Deepen your understanding through connection and logic.</p>
+          <p className="text-xl text-slate-500 font-medium">placeholder</p>
         </header>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -26,7 +26,7 @@ export default function MiddleSchool() {
         </div>
         
         <div className="mt-12 p-12 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-200 text-center text-slate-400 font-bold uppercase tracking-widest">
-          Content Area: Visual Learning Tools Coming Soon
+          placeholder
         </div>
       </div>
     </div>

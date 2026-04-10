@@ -2,9 +2,9 @@ import { HiChatBubbleLeftRight, HiDocumentText, HiBeaker } from "react-icons/hi2
 
 export default function HighSchool() {
   const tools = [
-    { title: "Socratic Tutor", desc: "Don't just get the answer. Chat with AI to solve the problem yourself.", icon: <HiChatBubbleLeftRight />, color: "text-indigo-600" },
-    { title: "Exam Prep", desc: "AP-aligned study guides and response feedback powered by AI.", icon: <HiDocumentText />, color: "text-slate-700" },
-    { title: "Lab Assistant", desc: "Simulate experiments and analyze data using statistical AI models.", icon: <HiBeaker />, color: "text-purple-600" }
+    { title: "Socratic Tutor", desc: "placeholder", icon: <HiChatBubbleLeftRight />, color: "text-indigo-600" },
+    { title: "Exam Prep", desc: "placeholder", icon: <HiDocumentText />, color: "text-slate-700" },
+    { title: "Lab Assistant", desc: "placeholder", icon: <HiBeaker />, color: "text-purple-600" }
   ];
 
   return (
@@ -12,7 +12,7 @@ export default function HighSchool() {
       <div className="max-w-6xl mx-auto">
         <header className="mb-16">
           <h1 className="text-6xl font-black tracking-tighter text-slate-900 mb-4">GRADES 9-12</h1>
-          <p className="text-xl text-slate-500 font-medium">Advanced tools for AP mastery and university readiness.</p>
+          <p className="text-xl text-slate-500 font-medium">placeholder</p>
         </header>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -26,7 +26,7 @@ export default function HighSchool() {
         </div>
         
         <div className="mt-12 p-12 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-200 text-center text-slate-400 font-bold uppercase tracking-widest">
-          Content Area: Socratic Tutor & Labs Coming Soon
+          placeholder
         </div>
       </div>
     </div>
