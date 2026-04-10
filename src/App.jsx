@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Import the new topbar
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Elementary from './pages/Elementary';
 import MiddleSchool from './pages/MiddleSchool';
@@ -9,9 +9,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white font-sans text-slate-900">
-        {/* Navbar stays here forever */}
-        <Navbar /> 
-        
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/elementary" element={<Elementary />} />
