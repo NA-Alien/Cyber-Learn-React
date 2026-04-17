@@ -1,33 +1,74 @@
-import { HiPuzzlePiece, HiPresentationChartBar, HiPlayCircle } from "react-icons/hi2";
+import { HiShieldCheck, HiFaceSmile, HiKey, HiEyeSlash } from "react-icons/hi2";
 
 export default function Elementary() {
-  const tools = [
-    { title: "AI Adventures", desc: "Interactive story-games where choices change the lesson.", icon: <HiPuzzlePiece />, color: "text-orange-500" },
-    { title: "Visual Slides", desc: "Big pictures and simple AI summaries of complex topics.", icon: <HiPresentationChartBar />, color: "text-green-500" },
-    { title: "Magic Videos", desc: "Curated science and nature videos with AI 'fun facts'.", icon: <HiPlayCircle />, color: "text-blue-500" }
+  const modules = [
+    { 
+      title: "Strong Secrets", 
+      icon: <HiKey />, 
+      desc: "How to make passwords that are super hard for robots to guess." 
+    },
+    { 
+      title: "Online Strangers", 
+      icon: <HiEyeSlash />, 
+      desc: "Who to talk to (and who not to talk to) when you are playing games." 
+    },
+    { 
+      title: "Being Kind", 
+      icon: <HiFaceSmile />, 
+      desc: "Why it's important to be a nice 'Digital Citizen' to your friends." 
+    },
+    { 
+      title: "Stay Safe", 
+      icon: <HiShieldCheck />, 
+      desc: "The basic rules of the internet road for younger explorers." 
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-20 px-6">
+    <div className="min-h-screen bg-black text-white pt-24 px-6 animate-in">
       <div className="max-w-6xl mx-auto">
+        
+        {/* Header Section */}
         <header className="mb-16">
-          <h1 className="text-6xl font-black tracking-tighter text-slate-900 mb-4">GRADES 1-5</h1>
-          <p className="text-xl text-slate-500 font-medium">Explore, play, and learn with your AI guide.</p>
+          <div className="w-20 h-1.5 bg-emerald-500 mb-6 rounded-full"></div>
+          <h1 className="text-7xl font-black tracking-tighter text-white uppercase">Digital Detectives</h1>
+          <p className="text-emerald-400 font-bold tracking-[0.2em] uppercase text-sm mt-4">
+            Level 01 // Grades 1-5 Submission
+          </p>
         </header>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {tools.map((tool) => (
-            <div key={tool.title} className="p-8 rounded-[32px] border-2 border-slate-50 hover:border-slate-200 transition-all cursor-pointer group">
-              <div className={`text-4xl mb-6 ${tool.color} group-hover:scale-110 transition-transform`}>{tool.icon}</div>
-              <h3 className="text-2xl font-bold mb-2">{tool.title}</h3>
-              <p className="text-slate-500 font-medium leading-relaxed">{tool.desc}</p>
+        {/* Modules Grid */}
+        <div className="grid md:grid-cols-2 gap-6 pb-20">
+          {modules.map((m, i) => (
+            <div 
+              key={i} 
+              className="p-10 rounded-[40px] bg-slate-950 border border-slate-900 hover:border-emerald-500 hover:bg-emerald-500/5 transition-all duration-500 cursor-pointer group"
+            >
+              <div className="flex items-start gap-8">
+                {/* Icon Container */}
+                <div className="text-6xl text-slate-800 group-hover:text-emerald-500 group-hover:scale-110 transition-all duration-500">
+                  {m.icon}
+                </div>
+                
+                {/* Text Content */}
+                <div>
+                  <h3 className="text-3xl font-black text-white mb-2 uppercase group-hover:text-emerald-400 transition-colors">
+                    {m.title}
+                  </h3>
+                  <p className="text-slate-400 text-lg font-medium leading-relaxed">
+                    {m.desc}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
-        
-        {/* Placeholder for future content */}
-        <div className="mt-12 p-12 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-200 text-center text-slate-400 font-bold uppercase tracking-widest">
-          Content Area: Games & Slides Coming Soon
+
+        {/* Simple Call to Action for Kids */}
+        <div className="text-center py-10 border-t border-slate-900">
+          <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
+            Ready to start your first detective mission?
+          </p>
         </div>
       </div>
     </div>

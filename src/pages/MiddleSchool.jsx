@@ -1,32 +1,39 @@
-import { HiLightBulb, HiMap, HiAcademicCap } from "react-icons/hi2";
+import { HiFingerPrint, HiEnvelopeOpen, HiUserGroup, HiMagnifyingGlass } from "react-icons/hi2";
 
 export default function MiddleSchool() {
-  const tools = [
-    { title: "Concept Maps", desc: "AI-generated maps showing how different subjects connect.", icon: <HiMap />, color: "text-blue-600" },
-    { title: "Analogy Lab", desc: "Stuck on a concept? AI explains it using things you already know.", icon: <HiLightBulb />, color: "text-yellow-500" },
-    { title: "Quick Quiz", desc: "Test your knowledge with AI-generated challenge sets.", icon: <HiAcademicCap />, color: "text-red-500" }
+  const modules = [
+    { title: "Phishing Radar", icon: <HiEnvelopeOpen />, desc: "Spotting deceptive emails and fake links." },
+    { title: "Digital Identity", icon: <HiFingerPrint />, desc: "Managing your permanent online footprint." },
+    { title: "Social Safety", icon: <HiUserGroup />, desc: "Protecting community data on social platforms." },
+    { title: "Scam Detection", icon: <HiMagnifyingGlass />, desc: "Recognizing common online fraud tactics." }
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-20 px-6">
+    <div className="min-h-screen bg-black text-white pt-24 px-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
       <div className="max-w-6xl mx-auto">
         <header className="mb-16">
-          <h1 className="text-6xl font-black tracking-tighter text-slate-900 mb-4">GRADES 6-8</h1>
-          <p className="text-xl text-slate-500 font-medium">placeholder</p>
+          <div className="w-20 h-1 bg-blue-600 mb-6"></div>
+          <h1 className="text-7xl font-black tracking-tighter text-white uppercase">Cyber Guardians</h1>
+          <p className="text-blue-400 font-bold tracking-[0.2em] uppercase text-sm mt-4">Level 02 // Grades 6-8 Submission</p>
         </header>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {tools.map((tool) => (
-            <div key={tool.title} className="p-8 rounded-[32px] border-2 border-slate-50 hover:border-slate-200 transition-all cursor-pointer group">
-              <div className={`text-4xl mb-6 ${tool.color} group-hover:scale-110 transition-transform`}>{tool.icon}</div>
-              <h3 className="text-2xl font-bold mb-2">{tool.title}</h3>
-              <p className="text-slate-500 font-medium leading-relaxed">{tool.desc}</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {modules.map((m, i) => (
+            <div 
+              key={i} 
+              className="p-10 rounded-[32px] bg-slate-950 border border-slate-900 hover:border-blue-500 hover:bg-blue-500/5 transition-all duration-500 cursor-pointer group"
+            >
+              <div className="flex items-start gap-8">
+                <div className="text-5xl text-slate-700 group-hover:text-blue-500 group-hover:scale-110 transition-all duration-500">
+                  {m.icon}
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-white mb-2 uppercase group-hover:text-blue-400 transition-colors">{m.title}</h3>
+                  <p className="text-slate-400 font-medium leading-relaxed">{m.desc}</p>
+                </div>
+              </div>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-12 p-12 rounded-[32px] bg-slate-50 border-2 border-dashed border-slate-200 text-center text-slate-400 font-bold uppercase tracking-widest">
-          placeholder
         </div>
       </div>
     </div>
